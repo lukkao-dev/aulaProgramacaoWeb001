@@ -1,0 +1,64 @@
+/* =========================================================
+   🧩 LAYOUT.CSS
+   Estrutura principal + grid + responsividade
+   ========================================================= */
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+  margin: 0;
+}
+
+/* ======== CABEÇALHO E RODAPÉ ======== */
+header, footer {
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
+main {
+  padding: var(--space-4);
+}
+
+section {
+  margin-bottom: var(--space-4);
+}
+
+/* ======== IMAGENS ======== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: auto;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 1200px) {
+  main { padding: var(--space-3); }
+}
+
+@media (max-width: 992px) {
+  h1 { font-size: var(--font-lg); }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 576px) {
+  body { font-size: var(--font-sm); }
+}
+
+@media (max-width: 400px) {
+  h2 { font-size: var(--font-sm); }
+}

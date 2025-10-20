@@ -4,50 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG FELINONG</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <style>
+        /* Variáveis de cores */
+        :root {
+            --azul-bebe: #a3d5f7;
+            --azul-escuro: #1a73e8;
+            --cinza-claro: #f5f5f5;
+            --texto-principal: #333;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--texto-principal);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--azul-bebe);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            color: var(--azul-escuro);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--azul-escuro);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0059b3;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: var(--azul-escuro);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+        }
+
+        section ul {
+            list-style: disc inside;
+            margin-top: 10px;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+        }
+
+        address p {
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: var(--azul-bebe);
+            text-align: center;
+            padding: 15px 0;
+            font-weight: 500;
+            color: var(--azul-escuro);
+            border-top: 2px solid var(--azul-escuro);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>FELINONG</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="projeto.html">Projeto</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Bem-vindo à ONG FELINONG. Quem somos?</h2>
             <p>Nós somos uma organização sem fins lucrativos dedicada ao bem-estar dos felinos.</p>
-            <img src="imagens/resgatedegato.png" height="450" width="450"  alt="Gatos resgatados" />
+            <img src="imagens/resgatedegato.png" height="450" width="450" alt="Gatos resgatados">
         </section>
 
         <section>
             <h2>Nossa missão</h2>
-            <p>Nossa missão é resgatar, cuidar e encontrar lares amorosos para gatos abandonados e em situação de risco e que possuem deficiência física.</p>
+            <p>Nossa missão é resgatar, cuidar e encontrar lares amorosos para gatos abandonados e em situação de risco, incluindo aqueles com deficiência física.</p>
         </section>
 
         <section>
             <h2>Como você pode ajudar</h2>
-
             <ul>
                 <li>Adote um gato</li>
                 <li>Faça uma doação</li>
                 <li>Seja um voluntário</li>
             </ul>
-            
+
             <h2>Entre em contato conosco</h2>
-            
-            <p>Se você tiver alguma dúvida ou quiser mais informações, entre em contato conosco pelo e-mail: contato@felinong.org, ou pelo telefone: (12) 99219-1874</p>
-            
+            <p>Se você tiver alguma dúvida ou quiser mais informações, entre em contato pelo e-mail: <a href="mailto:contato@felinong.org">contato@felinong.org</a> ou pelo telefone: (12) 99219-1874</p>
+
             <address>
                 <p>Rua dos Gatos, 123 - Centro - São Paulo - SP</p>
             </address>
         </section>
-    
     </main>
-    
+
     <footer>
         <p>&copy; 2025 ONG FELINONG. Todos os direitos reservados.</p>
     </footer>

@@ -4,6 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos Sociais - FELINONG</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Estilo adicional para visual moderno -->
+    <style>
+        /* Variáveis de cores */
+        :root {
+            --rosa-claro: #ffb6c1;
+            --rosa-escuro: #ff6699;
+            --azul-bebe: #a3d5f7;
+            --cinza-claro: #fdf5f7;
+            --texto-principal: #333;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--texto-principal);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--rosa-claro);
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8rem;
+            color: var(--rosa-escuro);
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--texto-principal);
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            text-shadow: 0 0 5px var(--rosa-escuro);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--rosa-escuro);
+            font-size: 2rem;
+            border-left: 6px solid var(--rosa-escuro);
+            padding-left: 12px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: var(--rosa-escuro);
+            font-size: 1.4rem;
+            margin-top: 15px;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background-color: var(--rosa-claro);
+            text-align: center;
+            padding: 20px;
+            font-weight: 500;
+            color: var(--rosa-escuro);
+            box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>

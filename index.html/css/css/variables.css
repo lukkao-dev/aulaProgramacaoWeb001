@@ -1,0 +1,31 @@
+/* =========================================================
+   🎨 VARIABLES.CSS
+   Design System: cores, tipografia e espaçamentos
+   ========================================================= */
+
+:root {
+  /* 🎨 Cores principais */
+  --cor-primaria: #2C3E50;        /* azul escuro */
+  --cor-secundaria: #3498DB;      /* azul claro */
+  --cor-terciaria: #1ABC9C;       /* verde água */
+  --cor-destaque: #E74C3C;        /* vermelho destaque */
+  --cor-neutra-clara: #ECF0F1;
+  --cor-neutra: #BDC3C7;
+  --cor-neutra-escura: #2C3E50;
+  --cor-fundo: #FFFFFF;
+
+  /* 🔤 Tipografia */
+  --font-xs: 0.8rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  /* 📏 Espaçamentos */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
