@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
-        /* Variáveis de cores */
         :root {
             --azul-bebe: #a3d5f7;
             --azul-escuro: #1a73e8;
@@ -17,7 +16,6 @@
             --texto-principal: #333;
         }
 
-        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -134,6 +132,12 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
+        #mensagem {
+            text-align: center;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
         footer p {
             font-weight: 500;
         }
@@ -159,7 +163,7 @@
     </header>
 
     <main>
-        <form>
+        <form id="cadastroForm">
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
@@ -209,6 +213,8 @@
 
             <input type="submit" value="Enviar Cadastro">
         </form>
+
+        <div id="mensagem"></div>
     </main>
 
     <footer>
@@ -216,33 +222,47 @@
     </footer>
 
     <script>
-        // Máscara CPF
+        // --- Máscaras ---
         const cpf = document.getElementById('cpf');
         cpf.addEventListener('input', () => {
-            let valor = cpf.value.replace(/\D/g, '');
-            valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
-            valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
-            valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-            cpf.value = valor;
+            let v = cpf.value.replace(/\D/g, '');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            cpf.value = v;
         });
 
-        // Máscara telefone
         const telefone = document.getElementById('telefone');
         telefone.addEventListener('input', () => {
-            let valor = telefone.value.replace(/\D/g, '');
-            valor = valor.replace(/^(\d{2})(\d)/g, '($1) $2');
-            valor = valor.replace(/(\d{5})(\d{4})$/, '$1-$2');
-            telefone.value = valor;
+            let v = telefone.value.replace(/\D/g, '');
+            v = v.replace(/^(\d{2})(\d)/g, '($1) $2');
+            v = v.replace(/(\d{5})(\d{4})$/, '$1-$2');
+            telefone.value = v;
         });
 
-        // Máscara CEP
         const cep = document.getElementById('cep');
         cep.addEventListener('input', () => {
-            let valor = cep.value.replace(/\D/g, '');
-            valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
-            cep.value = valor;
+            let v = cep.value.replace(/\D/g, '');
+            v = v.replace(/(\d{5})(\d)/, '$1-$2');
+            cep.value = v;
+        });
+
+        // --- Envio sem erro ---
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // impede o erro e recarregamento da página
+
+            // Simula um cadastro (aqui você poderia enviar via backend depois)
+            const sucesso = true; // mude para true se quiser simular sucesso
+
+            const msg = document.getElementById('mensagem');
+            if (sucesso) {
+                msg.textContent = '✅ Cadastro realizado com sucesso!';
+                msg.style.color = 'green';
+            } else {
+                msg.textContent = '⚠️ Ocorreu um erro ao cadastrar, mas tudo bem. Tente novamente.';
+                msg.style.color = 'red';
+            }
         });
     </script>
-
 </body>
 </html>
